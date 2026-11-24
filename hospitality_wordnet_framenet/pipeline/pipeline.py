@@ -1611,7 +1611,7 @@ def cmd_compare(exp, original_csv, original_json):
 
 # ------------------------------------------------------------------ index page
 
-GITHUB = "https://github.com/farnoosh-shamsian/DiaSoft"
+GITHUB = "https://github.com/DiaSoft-project/DiaSoft"
 RUN_NAMES = (("A_without_wordnet", "Without WordNet", "A"),
              ("B_with_wordnet", "With WordNet", "B"))
 

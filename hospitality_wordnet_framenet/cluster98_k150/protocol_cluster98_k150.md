@@ -1,6 +1,6 @@
 # Protocol: WordNet and FrameNet Mapping of Gift and Hospitality Cluster 98 (k=150), with and without WordNet
 
-Oct 16, 2026 · Farnoosh Shamsian
+Oct 16, 2026
 
 Model: Claude Opus 5.5 (`claude-opus-5-5`), run in Claude Code.
 

@@ -1611,7 +1611,6 @@ def cmd_compare(exp, original_csv, original_json):
 
 # ------------------------------------------------------------------ index page
 
-GITHUB = "https://github.com/DiaSoft-project/DiaSoft"
 RUN_NAMES = (("A_without_wordnet", "Without WordNet", "A"),
              ("B_with_wordnet", "With WordNet", "B"))
 
@@ -1661,9 +1660,9 @@ def first_sentence(s):
 
 
 def gh(path, tree=False):
-    """GitHub URL of a path given relative to the project folder."""
-    return (f"{GITHUB}/{'tree' if tree else 'blob'}/main/{PROJECT.name}/"
-            f"{path}")
+    """Relative link (from index.html) to a path given relative to the
+    project folder. Relative, so the page names no repository or owner."""
+    return f"{path}/" if tree else path
 
 
 def run_stats(exp, name):
@@ -1836,11 +1835,9 @@ def cmd_index(exps):
                              f'<span class="mut">({n} frames)</span></li>')
             items += [
                 f'<li><a href="{gh(base + f"/FrameNet/{e.slug}_field_framenet_full.csv")}">'
-                'frame assignments (CSV)</a></li>',
-                f'<li><a href="{gh(base + "/FrameNet/Lemmata", tree=True)}">'
-                'lemma notes (Obsidian)</a></li>',
-                f'<li><a href="{gh(base + "/method_notes.md")}">method notes'
-                '</a></li>']
+                'frame assignments (CSV)</a></li>']
+            # Lemmata/ and method_notes.md stay local (.gitignore), so the
+            # shared page does not link them.
             new = "".join(f'<span class="chip">🆕 {esc(p["name"])}</span>'
                           for p in r["proposed"]) or '<span class="mut">none</span>'
             h.append('<ul>' + "".join(items) + '</ul>'

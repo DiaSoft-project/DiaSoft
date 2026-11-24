@@ -1,6 +1,6 @@
 # Protocol: WordNet Check of Gloss-Embedding Cluster 128 (hospitality, escort, service)
 
-Oct 15, 2026, revised Oct 16, 2026 · Farnoosh Shamsian
+Oct 15, 2026, revised Oct 16, 2026
 
 Model: Claude Opus 5.5 (`claude-opus-5-5`), run in Claude Code.
 

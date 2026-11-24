@@ -29,3 +29,20 @@ desktop.ini
 
 # Ancient Greek WordNet SQL dump (third-party, ~61 MB): download it, do not commit it
 hospitality_wordnet_framenet/agwn_dump/
+
+# Kept locally, not shared: duplicates, caches and regenerable outputs
+# Duplicates: copies of pipeline/check_frames.py and of the k=200 cluster file
+hospitality_wordnet_framenet/*/common/check_frames.py
+hospitality_wordnet_framenet/wordnet_check_cluster128/input/clusters_ward_k200_no-freq-limit.txt
+# Caches and regenerable outputs
+agwn_cache.json
+contextual_clustering_greberta/greberta_clusters_output/lemma_vectors.npz
+frame_induction/predicate_arguments.csv
+lsj_semantic_search/lsj_social_relations_scores_ex*.csv
+
+# Kept locally, not shared: process records of the agent runs
+hospitality_wordnet_framenet/*/common/run_prompts.md
+hospitality_wordnet_framenet/*/PROMPT.md
+hospitality_wordnet_framenet/*/output/agent_flags.csv
+hospitality_wordnet_framenet/*/*/method_notes.md
+hospitality_wordnet_framenet/*/*/FrameNet/Lemmata/
